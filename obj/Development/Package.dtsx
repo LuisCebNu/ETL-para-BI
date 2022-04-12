@@ -1,0 +1,975 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="10/9/2020 11:48:59 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="LUIS-LAPTOP"
+  DTS:CreatorName="LUIS-LAPTOP\stars"
+  DTS:DTSID="{1A2E04A5-D08D-41F0-ADA6-2328FBC7FCA2}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.132"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="15"
+  DTS:VersionGUID="{49FED829-67E9-4E08-9EEA-E030FC007484}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{5B2A31AC-0DAD-473E-9E98-5E8AF500A406}"
+      DTS:ObjectName="Excel Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.16.0;Data Source=C:\Users\stars\Desktop\ETL sources\Documento excel.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager 1]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{2CE3DDA2-5ED2-4E88-98F4-A1C45D501D5C}"
+      DTS:ObjectName="Excel Connection Manager 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\stars\Desktop\ETL sources\Documento excel.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:Description="Flat text"
+      DTS:DTSID="{6E4E131E-0BE9-423E-9D5D-15E327F5534B}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:Unicode="True"
+          DTS:HeaderRowDelimiter="_x007C_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\stars\Desktop\ETL sources\archivo de texto.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 0"
+              DTS:DTSID="{94F68AF3-F7C5-4060-84C2-532BF9E4B26B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 1"
+              DTS:DTSID="{57BF59E1-FD7F-4448-B8D0-B7367A15AB98}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 2"
+              DTS:DTSID="{0D520748-E824-4880-BFD5-9B809E9BDE05}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 3"
+              DTS:DTSID="{3F09018E-4DE0-4928-B5DF-FF69CF81BD4C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 4"
+              DTS:DTSID="{71919EF6-0F27-4EAE-875A-46D2B8EB6BA6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 5"
+              DTS:DTSID="{D3F5C199-26AD-4EC9-8756-F658B470B88C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 6"
+              DTS:DTSID="{0D07E244-7FED-410D-9137-514FD38C9FF7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 7"
+              DTS:DTSID="{A10A22A2-5790-4AB7-96D2-1D9AF014AA8C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 8"
+              DTS:DTSID="{EB941B29-CD0C-461F-9DF3-58DEF082E575}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 9"
+              DTS:DTSID="{1FA9C16B-784E-4ED3-ADC3-F7D330298972}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 10"
+              DTS:DTSID="{9BF73241-67F5-45AB-9A63-8B38FD8C3901}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 1]"
+      DTS:CreationName="FLATFILE"
+      DTS:Description="Archivo separado por comas"
+      DTS:DTSID="{B753C27E-0709-4C6D-B76A-2DD1578A3054}"
+      DTS:ObjectName="Flat File Connection Manager 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x002C_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="65001"
+          DTS:ConnectionString="C:\Users\stars\Desktop\ETL sources\Documento separado por comas2.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Nombre "
+              DTS:DTSID="{2F023A8A-5CA3-4B18-9CF3-9D4BFABDE97D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ID Cita"
+              DTS:DTSID="{0E47C998-14AF-4384-978E-A77A25073467}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Apelido"
+              DTS:DTSID="{24981B4D-3069-41CF-AF15-BDBF15D1A4B1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Direccion"
+              DTS:DTSID="{DEF6F5AF-D5E8-4A9B-8641-A648511B49CB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Edad"
+              DTS:DTSID="{2F628576-DBCB-4A07-B514-0A42A145B7A8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Hora"
+              DTS:DTSID="{21F5BEB5-8545-4A32-80BA-DBF9249CEF2A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Direccion Surcusal"
+              DTS:DTSID="{7CFACE3B-2238-458A-84B2-9E57FA7A19D3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Fecha"
+              DTS:DTSID="{B1A2FBB2-A9A4-46EC-83DD-8BB8E41449EF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Doctor"
+              DTS:DTSID="{7F230194-7D9B-4C44-9A74-D659B4507BF8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Trabajo"
+              DTS:DTSID="{84576562-FB38-4206-A106-2B52C557E754}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Enfermero asistente"
+              DTS:DTSID="{AA276604-7ED7-4802-8CA2-A1D62A31F269}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LUIS-LAPTOP.base de datos b]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{1805E221-5C2C-4300-B599-2D7F073346A5}"
+      DTS:ObjectName="LUIS-LAPTOP.base de datos b">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=LUIS-LAPTOP;Initial Catalog=base de datos b;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LUIS-LAPTOP.registro_odontologico.Puchi]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{FF61426F-DDDC-42D4-B613-CCBD6E88222F}"
+      DTS:ObjectName="LUIS-LAPTOP.registro_odontologico.Puchi">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=LUIS-LAPTOP;User ID=Puchi;Initial Catalog=registro_odontologico;Provider=MSOLEDBSQL.1;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAy84fHJ0i3U25nVxWWtjnWAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAALKXJURO49MF4Xq/8Ypri83mdiVf5mRDJxMbNoaU9VBQAAAAAOgAAAAAIAACAAAABeG/d1Ts3QlGaBVMoczXwUFeqZut6Oq4VXdC+MqGmSfSAAAAAuhdFBmKTawoJgG0FdBL9ex775YOio6MtNstnumLeKHUAAAAC/b49aw7x6jIpg7OlIjQClKPcb7ylJvGukfptiGkhDyMc6I8GEcmTJUiBZK32+Y08xJIATyaw2bi67b6hAD/fe</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Sequence Container"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{31921CFF-39F5-4484-8A34-4DC9BF7C8143}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Sequence Container">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Sequence Container\Data Flow Task"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{04C0B07D-13F5-4FB3-8742-77FF613802F0}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Data Flow Task"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\Sequence Container\Data Flow Task\OLE DB Destination 1"
+                  componentClassID="Microsoft.OLEDBDestination"
+                  contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="OLE DB Destination"
+                  name="OLE DB Destination 1"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">[dbo].[tabla]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">3</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                      name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                      name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Sequence Container\Data Flow Task\OLE DB Destination 1.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[LUIS-LAPTOP.base de datos b]"
+                      connectionManagerRefId="Package.ConnectionManagers[LUIS-LAPTOP.base de datos b]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Sequence Container\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input]"
+                      errorOrTruncationOperation="Insert"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="OLE DB Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[nombre_paciente]"
+                          cachedDataType="wstr"
+                          cachedLength="20"
+                          cachedName="nombre_paciente"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[campo2]"
+                          lineageId="Package\Sequence Container\Data Flow Task\SQL.Outputs[OLE DB Source Output].Columns[nombre_paciente]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[apellido_paciente]"
+                          cachedDataType="wstr"
+                          cachedLength="20"
+                          cachedName="apellido_paciente"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[campo3]"
+                          lineageId="Package\Sequence Container\Data Flow Task\SQL.Outputs[OLE DB Source Output].Columns[apellido_paciente]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[direccion]"
+                          cachedDataType="wstr"
+                          cachedLength="40"
+                          cachedName="direccion"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[campo4]"
+                          lineageId="Package\Sequence Container\Data Flow Task\SQL.Outputs[OLE DB Source Output].Columns[direccion]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[doctor]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="doctor"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[campo1]"
+                          lineageId="Package\Sequence Container\Data Flow Task\SQL.Outputs[OLE DB Source Output].Columns[doctor]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[enfermero_asistente]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="enfermero_asistente"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[campo5]"
+                          lineageId="Package\Sequence Container\Data Flow Task\SQL.Outputs[OLE DB Source Output].Columns[enfermero_asistente]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[trabajo]"
+                          cachedDataType="wstr"
+                          cachedLength="30"
+                          cachedName="trabajo"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[campo6]"
+                          lineageId="Package\Sequence Container\Data Flow Task\SQL.Outputs[OLE DB Source Output].Columns[trabajo]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[direccion_surcusal]"
+                          cachedDataType="wstr"
+                          cachedLength="40"
+                          cachedName="direccion_surcusal"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[campo7]"
+                          lineageId="Package\Sequence Container\Data Flow Task\SQL.Outputs[OLE DB Source Output].Columns[direccion_surcusal]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[id_cita]"
+                          cachedDataType="i4"
+                          cachedName="id_cita"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[campo8]"
+                          lineageId="Package\Sequence Container\Data Flow Task\SQL.Outputs[OLE DB Source Output].Columns[id_cita]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[edad]"
+                          cachedDataType="i4"
+                          cachedName="edad"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[campo9]"
+                          lineageId="Package\Sequence Container\Data Flow Task\SQL.Outputs[OLE DB Source Output].Columns[edad]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[fecha]"
+                          cachedDataType="dbDate"
+                          cachedName="fecha"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[campo10]"
+                          lineageId="Package\Sequence Container\Data Flow Task\SQL.Outputs[OLE DB Source Output].Columns[fecha]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[hora]"
+                          cachedDataType="dbTime2"
+                          cachedName="hora"
+                          cachedScale="7"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[campo11]"
+                          lineageId="Package\Sequence Container\Data Flow Task\SQL.Outputs[OLE DB Source Output].Columns[hora]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[campo1]"
+                          dataType="wstr"
+                          length="50"
+                          name="campo1" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[campo2]"
+                          dataType="wstr"
+                          length="50"
+                          name="campo2" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[campo3]"
+                          dataType="wstr"
+                          length="50"
+                          name="campo3" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[campo4]"
+                          dataType="wstr"
+                          length="50"
+                          name="campo4" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[campo5]"
+                          dataType="wstr"
+                          length="50"
+                          name="campo5" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[campo6]"
+                          dataType="wstr"
+                          length="50"
+                          name="campo6" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[campo7]"
+                          dataType="wstr"
+                          length="50"
+                          name="campo7" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[campo8]"
+                          dataType="i4"
+                          name="campo8" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[campo9]"
+                          dataType="i4"
+                          name="campo9" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[campo10]"
+                          dataType="dbDate"
+                          name="campo10" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[campo11]"
+                          dataType="dbTime2"
+                          name="campo11"
+                          scale="7" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Sequence Container\Data Flow Task\OLE DB Destination 1.Outputs[OLE DB Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="OLE DB Destination Error Output"
+                      synchronousInputId="Package\Sequence Container\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Sequence Container\Data Flow Task\SQL"
+                  componentClassID="Microsoft.OLEDBSource"
+                  contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+                  description="OLE DB Source"
+                  name="SQL"
+                  usesDispositions="true"
+                  version="7">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">[dbo].[Registros]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                    <property
+                      dataType="System.String"
+                      description="The variable that contains the SQL command to be executed."
+                      name="SqlCommandVariable"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">0</property>
+                    <property
+                      dataType="System.String"
+                      description="The mappings between the parameters in the SQL command and variables."
+                      name="ParameterMapping"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Sequence Container\Data Flow Task\SQL.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[LUIS-LAPTOP.registro_odontologico.Puchi]"
+                      connectionManagerRefId="Package.ConnectionManagers[LUIS-LAPTOP.registro_odontologico.Puchi]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\Sequence Container\Data Flow Task\SQL.Outputs[OLE DB Source Output]"
+                      name="OLE DB Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\SQL.Outputs[OLE DB Source Output].Columns[id_cita]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\SQL.Outputs[OLE DB Source Output].ExternalColumns[id_cita]"
+                          lineageId="Package\Sequence Container\Data Flow Task\SQL.Outputs[OLE DB Source Output].Columns[id_cita]"
+                          name="id_cita"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\SQL.Outputs[OLE DB Source Output].Columns[nombre_paciente]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\SQL.Outputs[OLE DB Source Output].ExternalColumns[nombre_paciente]"
+                          length="20"
+                          lineageId="Package\Sequence Container\Data Flow Task\SQL.Outputs[OLE DB Source Output].Columns[nombre_paciente]"
+                          name="nombre_paciente"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\SQL.Outputs[OLE DB Source Output].Columns[apellido_paciente]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\SQL.Outputs[OLE DB Source Output].ExternalColumns[apellido_paciente]"
+                          length="20"
+                          lineageId="Package\Sequence Container\Data Flow Task\SQL.Outputs[OLE DB Source Output].Columns[apellido_paciente]"
+                          name="apellido_paciente"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\SQL.Outputs[OLE DB Source Output].Columns[direccion]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\SQL.Outputs[OLE DB Source Output].ExternalColumns[direccion]"
+                          length="40"
+                          lineageId="Package\Sequence Container\Data Flow Task\SQL.Outputs[OLE DB Source Output].Columns[direccion]"
+                          name="direccion"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\SQL.Outputs[OLE DB Source Output].Columns[edad]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\SQL.Outputs[OLE DB Source Output].ExternalColumns[edad]"
+                          lineageId="Package\Sequence Container\Data Flow Task\SQL.Outputs[OLE DB Source Output].Columns[edad]"
+                          name="edad"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\SQL.Outputs[OLE DB Source Output].Columns[fecha]"
+                          dataType="dbDate"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\SQL.Outputs[OLE DB Source Output].ExternalColumns[fecha]"
+                          lineageId="Package\Sequence Container\Data Flow Task\SQL.Outputs[OLE DB Source Output].Columns[fecha]"
+                          name="fecha"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\SQL.Outputs[OLE DB Source Output].Columns[hora]"
+                          dataType="dbTime2"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\SQL.Outputs[OLE DB Source Output].ExternalColumns[hora]"
+                          lineageId="Package\Sequence Container\Data Flow Task\SQL.Outputs[OLE DB Source Output].Columns[hora]"
+                          name="hora"
+                          scale="7"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\SQL.Outputs[OLE DB Source Output].Columns[direccion_surcusal]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\SQL.Outputs[OLE DB Source Output].ExternalColumns[direccion_surcusal]"
+                          length="40"
+                          lineageId="Package\Sequence Container\Data Flow Task\SQL.Outputs[OLE DB Source Output].Columns[direccion_surcusal]"
+                          name="direccion_surcusal"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\SQL.Outputs[OLE DB Source Output].Columns[doctor]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\SQL.Outputs[OLE DB Source Output].ExternalColumns[doctor]"
+                          length="50"
+                          lineageId="Package\Sequence Container\Data Flow Task\SQL.Outputs[OLE DB Source Output].Columns[doctor]"
+                          name="doctor"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\SQL.Outputs[OLE DB Source Output].Columns[enfermero_asistente]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\SQL.Outputs[OLE DB Source Output].ExternalColumns[enfermero_asistente]"
+                          length="50"
+                          lineageId="Package\Sequence Container\Data Flow Task\SQL.Outputs[OLE DB Source Output].Columns[enfermero_asistente]"
+                          name="enfermero_asistente"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\SQL.Outputs[OLE DB Source Output].Columns[trabajo]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\SQL.Outputs[OLE DB Source Output].ExternalColumns[trabajo]"
+                          length="30"
+                          lineageId="Package\Sequence Container\Data Flow Task\SQL.Outputs[OLE DB Source Output].Columns[trabajo]"
+                          name="trabajo"
+                          truncationRowDisposition="FailComponent" />
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\SQL.Outputs[OLE DB Source Output].ExternalColumns[id_cita]"
+                          dataType="i4"
+                          name="id_cita" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\SQL.Outputs[OLE DB Source Output].ExternalColumns[nombre_paciente]"
+                          dataType="wstr"
+                          length="20"
+                          name="nombre_paciente" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\SQL.Outputs[OLE DB Source Output].ExternalColumns[apellido_paciente]"
+                          dataType="wstr"
+                          length="20"
+                          name="apellido_paciente" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\SQL.Outputs[OLE DB Source Output].ExternalColumns[direccion]"
+                          dataType="wstr"
+                          length="40"
+                          name="direccion" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\SQL.Outputs[OLE DB Source Output].ExternalColumns[edad]"
+                          dataType="i4"
+                          name="edad" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\SQL.Outputs[OLE DB Source Output].ExternalColumns[fecha]"
+                          dataType="dbDate"
+                          name="fecha" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\SQL.Outputs[OLE DB Source Output].ExternalColumns[hora]"
+                          dataType="dbTime2"
+                          name="hora"
+                          scale="7" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\SQL.Outputs[OLE DB Source Output].ExternalColumns[direccion_surcusal]"
+                          dataType="wstr"
+                          length="40"
+                          name="direccion_surcusal" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\SQL.Outputs[OLE DB Source Output].ExternalColumns[doctor]"
+                          dataType="wstr"
+                          length="50"
+                          name="doctor" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\SQL.Outputs[OLE DB Source Output].ExternalColumns[enfermero_asistente]"
+                          dataType="wstr"
+                          length="50"
+                          name="enfermero_asistente" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\SQL.Outputs[OLE DB Source Output].ExternalColumns[trabajo]"
+                          dataType="wstr"
+                          length="30"
+                          name="trabajo" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\Sequence Container\Data Flow Task\SQL.Outputs[OLE DB Source Error Output]"
+                      isErrorOut="true"
+                      name="OLE DB Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\SQL.Outputs[OLE DB Source Error Output].Columns[id_cita]"
+                          dataType="i4"
+                          lineageId="Package\Sequence Container\Data Flow Task\SQL.Outputs[OLE DB Source Error Output].Columns[id_cita]"
+                          name="id_cita" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\SQL.Outputs[OLE DB Source Error Output].Columns[nombre_paciente]"
+                          dataType="wstr"
+                          length="20"
+                          lineageId="Package\Sequence Container\Data Flow Task\SQL.Outputs[OLE DB Source Error Output].Columns[nombre_paciente]"
+                          name="nombre_paciente" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\SQL.Outputs[OLE DB Source Error Output].Columns[apellido_paciente]"
+                          dataType="wstr"
+                          length="20"
+                          lineageId="Package\Sequence Container\Data Flow Task\SQL.Outputs[OLE DB Source Error Output].Columns[apellido_paciente]"
+                          name="apellido_paciente" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\SQL.Outputs[OLE DB Source Error Output].Columns[direccion]"
+                          dataType="wstr"
+                          length="40"
+                          lineageId="Package\Sequence Container\Data Flow Task\SQL.Outputs[OLE DB Source Error Output].Columns[direccion]"
+                          name="direccion" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\SQL.Outputs[OLE DB Source Error Output].Columns[edad]"
+                          dataType="i4"
+                          lineageId="Package\Sequence Container\Data Flow Task\SQL.Outputs[OLE DB Source Error Output].Columns[edad]"
+                          name="edad" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\SQL.Outputs[OLE DB Source Error Output].Columns[fecha]"
+                          dataType="dbDate"
+                          lineageId="Package\Sequence Container\Data Flow Task\SQL.Outputs[OLE DB Source Error Output].Columns[fecha]"
+                          name="fecha" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\SQL.Outputs[OLE DB Source Error Output].Columns[hora]"
+                          dataType="dbTime2"
+                          lineageId="Package\Sequence Container\Data Flow Task\SQL.Outputs[OLE DB Source Error Output].Columns[hora]"
+                          name="hora"
+                          scale="7" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\SQL.Outputs[OLE DB Source Error Output].Columns[direccion_surcusal]"
+                          dataType="wstr"
+                          length="40"
+                          lineageId="Package\Sequence Container\Data Flow Task\SQL.Outputs[OLE DB Source Error Output].Columns[direccion_surcusal]"
+                          name="direccion_surcusal" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\SQL.Outputs[OLE DB Source Error Output].Columns[doctor]"
+                          dataType="wstr"
+                          length="50"
+                          lineageId="Package\Sequence Container\Data Flow Task\SQL.Outputs[OLE DB Source Error Output].Columns[doctor]"
+                          name="doctor" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\SQL.Outputs[OLE DB Source Error Output].Columns[enfermero_asistente]"
+                          dataType="wstr"
+                          length="50"
+                          lineageId="Package\Sequence Container\Data Flow Task\SQL.Outputs[OLE DB Source Error Output].Columns[enfermero_asistente]"
+                          name="enfermero_asistente" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\SQL.Outputs[OLE DB Source Error Output].Columns[trabajo]"
+                          dataType="wstr"
+                          length="30"
+                          lineageId="Package\Sequence Container\Data Flow Task\SQL.Outputs[OLE DB Source Error Output].Columns[trabajo]"
+                          name="trabajo" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\SQL.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Sequence Container\Data Flow Task\SQL.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\SQL.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Sequence Container\Data Flow Task\SQL.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\Sequence Container\Data Flow Task.Paths[OLE DB Source Output]"
+                  endId="Package\Sequence Container\Data Flow Task\OLE DB Destination 1.Inputs[OLE DB Destination Input]"
+                  name="OLE DB Source Output"
+                  startId="Package\Sequence Container\Data Flow Task\SQL.Outputs[OLE DB Source Output]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="155,42"
+          Id="Package\Sequence Container\Data Flow Task"
+          TopLeft="46,55" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="312,262"
+          Size="312,305"
+          Id="Package\Sequence Container"
+          TopLeft="111,63" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Sequence Container\Data Flow Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="101,42"
+          Id="Package\Sequence Container\Data Flow Task\SQL"
+          TopLeft="267,25" />
+        <NodeLayout
+          Size="186,42"
+          Id="Package\Sequence Container\Data Flow Task\OLE DB Destination 1"
+          TopLeft="232,215" />
+        <EdgeLayout
+          Id="Package\Sequence Container\Data Flow Task.Paths[OLE DB Source Output]"
+          TopLeft="321.25,67">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,148"
+              Start="0,0"
+              End="0,140.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,140.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Sequence Container\Data Flow Task\SQL">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Sequence Container\Data Flow Task\OLE DB Destination 1">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
